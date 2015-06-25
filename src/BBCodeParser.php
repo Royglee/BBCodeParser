@@ -25,8 +25,8 @@ class BBCodeParser
             'replace' => '<strike>$1</strike>',
         ],
         'size' => [
-            'pattern' => '/\[size\=([1-7])\](.*?)\[\/size\]/s',
-            'replace' => '<font size="$1">$2</font>',
+            'pattern' => '/\[size\=([0-9]*)\](.*?)\[\/size\]/s',
+            'replace' => '<span style="font-size: $1% ">$2</span>',
         ],
         'color' => [
             'pattern' => '/\[color\=(#[A-f0-9]{6}|#[A-f0-9]{3})\](.*?)\[\/color\]/s',
